@@ -1,3 +1,4 @@
+from tkinter import Scale
 from gameObject import GameObject
 
 class Player(GameObject):
@@ -8,4 +9,11 @@ class Player(GameObject):
         self.speed = speed;
 
     def move(self, direction):
+        # print(self.y, (self.height - self.image.get_height()))
+        if (self.y >= self.height - self.image.get_height()) and direction is 1:
+            return
+        elif (self.y <= 0) and direction is -1:
+            return
+        
         self.y += (direction * self.speed);
+

@@ -8,5 +8,5 @@ class GameObject:
 
         self.x = x + (width - self.image.get_width())//2;
         self.y = y + (height - self.image.get_height())//2;
-        self.width = self.image.get_width();
-        self.height = self.image.get_height();
+        self.width = width;
+        self.height = height;
